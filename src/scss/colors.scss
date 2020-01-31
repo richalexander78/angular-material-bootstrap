@@ -1,0 +1,224 @@
+//Neutral Colors
+$neutral-white: #FFFFFF;
+$neutral-off-white: #F8F8F8;
+$neutral-gray-lightest: #EFEFEF;
+$neutral-gray-light: #CCCCCC;
+$neutral-gray: #999999;
+$neutral-gray-dark: #7F7F7F;
+$neutral-gray-darkest: #525252;
+$neutral-charcoal: #333333;
+$neutral-black: #000000;
+
+$accent-indigo-lightest: #A6A8D6;
+$accent-indigo-light: #5E62B4;
+$accent-indigo: #4C50AC;
+$accent-indigo-dark: #44489B;
+$accent-indigo-darkest: #2E3067;
+
+$accent-green-lightest: #97E6A0;
+$accent-green-light: #43D153;
+$accent-green: #2ECC40;
+$accent-green-dark: #29BB3A;
+$accent-green-darkest: #1C7A26;
+
+$accent-yellow-lightest: #FFEE80;
+$accent-yellow-light: #FFE01A;
+$accent-yellow: #FFDC00;
+$accent-yellow-dark: #E6C600;
+$accent-yellow-darkest: #998400;
+
+$accent-teal-lightest: #81CBD3;
+$accent-teal-light: #1CA1AF;
+$accent-teal: #0396A6;
+$accent-teal-dark: #038795;
+$accent-teal-darkest: #025A64;
+
+//Status Colors
+$success-green-lightest: #80C593;
+$success-green-light: #1A963D;
+$success-green: #008A27;
+$success-green-dark: #007C23;
+$success-green-darkest: #005317;
+
+$warning-orange-lightest: #F8BA84;
+$warning-orange-light: #F28322;
+$warning-orange: #F07509;
+$warning-orange-dark: #D86908;
+$warning-orange-darkest: #904605;
+
+$danger-red-lightest: #ED9B96;
+$danger-red-light: #DF4B41;
+$danger-red: #DB372C;
+$danger-red-dark: #C53228;
+$danger-red-darkest: #83211A;
+
+$disabled-gray-lightest: #BFBFBF;
+$disabled-gray-light: #8C8C8C;
+$disabled-gray: #7F7F7F;
+$disabled-gray-dark: #727272;
+$disabled-gray-darkest: #4C4C4C;
+
+//Brand Colors
+$primary-purple-lightest: #BBA9E8;
+$primary-purple-light: #8564D5;
+$primary-purple: #7753D0;
+$primary-purple-dark: #6B4BBB;
+$primary-purple-darkest: #47327D;
+
+$secondary-blue-lightest: #80BAEC;
+$secondary-blue-light: #1A82DD;
+$secondary-blue: #0074D9;
+$secondary-blue-dark: #0068C3;
+$secondary-blue-darkest: #004682;
+
+$tertiary-blue-lightest: #80D3FF;
+$tertiary-blue-light: #1AAFFF;
+$tertiary-blue: #00A6FF;
+$tertiary-blue-dark: #0095E6;
+$tertiary-blue-darkest: #006499;
+
+$tertiary-midnight-blue-lightest: #A4A6BF;
+$tertiary-midnight-blue-light: #5A5E8C;
+$tertiary-midnight-blue: #484C7F;
+$tertiary-midnight-blue-dark: #414472;
+$tertiary-midnight-blue-darkest: #2B2E4C;
+
+//White Label Colors
+$white-label-sage-lightest: #9DC1C1;
+$white-label-sage-light: #4F8F8F;
+$white-label-sage: #3B8282;
+$white-label-sage-dark: #357575;
+$white-label-sage-darkest: #234E4E;
+
+$white-label-ocean-lightest: #95B3C7;
+$white-label-ocean-light: #3F7599;
+$white-label-ocean: #2A668E;
+$white-label-ocean-dark: #265C80;
+$white-label-ocean-darkest: #193D55;
+
+$white-label-sky-lightest: #82CEEC;
+$white-label-sky-light: #1DA7DD;
+$white-label-sky: #049DD9;
+$white-label-sky-dark: #048DC3;
+$white-label-sky-darkest: #025E82;
+
+$white-label-algae-lightest: #81A8AC;
+$white-label-algae-light: #1B626A;
+$white-label-algae: #025159;
+$white-label-algae-dark: #024950;
+$white-label-algae-darkest: #013135;
+
+//Neutral Colors
+.neutral-white { color: $neutral-white; }
+.neutral-off-white { color: $neutral-off-white; }
+.neutral-lightest { color: $neutral-gray-lightest; }
+.neutral-gray-light { color: $neutral-gray-light; }
+.neutral-gray { color: $neutral-gray; }
+.neutral-gray-dark { color: $neutral-gray-dark; }
+.neutral-gray-darkest { color: $neutral-gray-darkest; }
+.neutral-charcoal { color: $neutral-charcoal; }
+.neutral-black { color: $neutral-black; }
+
+//Accent Colors
+.accent-indigo-lightest { color: $accent-indigo-lightest; }
+.accent-indigo-light { color: $accent-indigo-light; }
+.accent-indigo { color: $accent-indigo; }
+.accent-indigo-dark { color: $accent-indigo-dark; }
+.accent-indigo-darkest { color: $accent-indigo-darkest; }
+
+.accent-green-lightest { color: $accent-green-lightest; }
+.accent-green-light { color: $accent-green-light; }
+.accent-green { color: $accent-green; }
+.accent-green-dark { color: $accent-green-dark; }
+.accent-green-darkest { color: $accent-green-darkest; }
+
+.accent-yellow-lightest { color: $accent-yellow-lightest; }
+.accent-yellow-light { color: $accent-yellow-light; }
+.accent-yellow { color: $accent-yellow; }
+.accent-yellow-dark { color: $accent-yellow-dark; }
+.accent-yellow-darkest { color: $accent-yellow-darkest; }
+
+.accent-teal-lightest { color: $accent-teal-lightest; }
+.accent-teal-light { color: $accent-teal-light; }
+.accent-teal { color: $accent-teal; }
+.accent-teal-dark { color: $accent-teal-dark; }
+.accent-teal-darkest { color: $accent-teal-darkest; }
+
+//Status Colors
+.success-green-lightest { color: $success-green-lightest; }
+.success-green-light { color: $success-green-light; }
+.success-green { color: $success-green; }
+.success-green-dark { color: $success-green-dark; }
+.success-green-darkest { color: $success-green-darkest; }
+
+.warning-orange-lightest { color: $warning-orange-lightest; }
+.warning-orange-light { color: $warning-orange-light; }
+.warning-orange { color: $warning-orange; }
+.warning-orange-dark { color: $warning-orange-dark; }
+.warning-orange-darkest { color: $warning-orange-darkest; }
+
+.danger-red-lightest { color: $danger-red-lightest; }
+.danger-red-light { color: $danger-red-light; }
+.danger-red { color: $danger-red; }
+.danger-red-dark { color: $danger-red-dark; }
+.danger-red-darkest { color: $danger-red-darkest; }
+
+.disabled-gray-lightest { color: $disabled-gray-lightest; }
+.disabled-gray-light { color: $disabled-gray-light; }
+.disabled-gray { color: $disabled-gray; }
+.disabled-gray-dark { color: $disabled-gray-dark; }
+.disabled-gray-darkest { color: $disabled-gray-darkest; }
+
+//Brand Colors
+.primary-purple-lightest { color: $primary-purple-lightest; }
+.primary-purple-light { color: $primary-purple-light; }
+.primary-purple { color: $primary-purple; }
+.primary-purple-dark { color: $primary-purple-dark; }
+.primary-purple-darkest { color: $primary-purple-darkest; }
+
+.secondary-blue-lightest { color: $secondary-blue-lightest; }
+.secondary-blue-light { color: $secondary-blue-light; }
+.secondary-blue { color: $secondary-blue; }
+.secondary-blue-dark { color: $secondary-blue-dark; }
+.secondary-blur-darkest { color: $secondary-blue-darkest; }
+
+.tertiary-blue-lightest { color: $tertiary-blue-lightest; }
+.tertiary-blue-light { color: $tertiary-blue-light; }
+.tertiary-blue { color: $tertiary-blue; }
+.tertiary-blue-dark { color: $tertiary-blue-dark; }
+.tertiary-blue-darkest { color: $tertiary-blue-darkest; }
+
+.tertiary-midnight-blue-lightest { color: $tertiary-midnight-blue-lightest; }
+.tertiary-midnight-blue-light { color: $tertiary-midnight-blue-light; }
+.tertiary-midnight-blue { color: $tertiary-midnight-blue; }
+.tertiary-midnight-blue-dark { color: $tertiary-midnight-blue-dark; }
+.tertiary-midnight-blue-darkest { color: $tertiary-midnight-blue-darkest; }
+
+//Background Colors
+.neutral-white-bg-100 { background-color: $neutral-white !important; }
+.tertiary-light-blue-bg-50 { background: map-get($mat-tertiary-light-blue, 50) !important; }
+
+//White Label Colors
+.white-label-sage-lightest { color: $white-label-sage-lightest; }
+.white-label-sage-light { color: $white-label-sage-light; }
+.white-label-sage { color: $white-label-sage; }
+.white-label-sage-dark { color: $white-label-sage-dark; }
+.white-label-sage-darkest { color: $white-label-sage-darkest; }
+
+.white-label-ocean-lightest { color: $white-label-ocean-lightest; }
+.white-label-ocean-light { color: $white-label-ocean-light; }
+.white-label-ocean { color: $white-label-ocean; }
+.white-label-ocean-dark { color: $white-label-ocean-dark; }
+.white-label-ocean-darkest { color: $white-label-ocean-darkest; }
+
+.white-label-sky-lightest { color: $white-label-sky-lightest; }
+.white-label-sky-light { color: $white-label-sky-light; }
+.white-label-sky { color: $white-label-sky; }
+.white-label-sky-dark { color: $white-label-sky-dark; }
+.white-label-sky-darkest { color: $white-label-sky-darkest; }
+
+.white-label-algae-lightest { color: $white-label-algae-lightest; }
+.white-label-algae-light { color: $white-label-algae-light; }
+.white-label-algae { color: $white-label-algae; }
+.white-label-algae-darl { color: $white-label-algae-dark; }
+.white-label-algae-darkest { color: $white-label-algae-darkest; }

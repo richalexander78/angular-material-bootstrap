@@ -1,0 +1,28 @@
+@import '~@angular/material/theming';
+@import 'foundation-palettes';
+
+// Define a custom typography config that overrides the font-family.
+$custom-typography: mat-typography-config(
+  $font-family: 'proxima-nova, sans-serif',
+);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($custom-typography);
+
+// Define the palettes for your theme using the Foundation palettes available in foundation-palette.scss
+// For each palette, you can optionally specify a default, lighter, and darker hue
+$angular-material-io-primary: mat-palette($mat-primary-purple, 900);
+$angular-material-io-accent: mat-palette($mat-secondary-blue);
+$angular-material-io-warn: mat-palette($mat-danger-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$angular-material-io-theme: mat-light-theme($angular-material-io-primary, $angular-material-io-accent, $angular-material-io-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component that you are using.
+@include angular-material-theme($angular-material-io-theme);
