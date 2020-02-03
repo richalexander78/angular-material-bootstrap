@@ -1,16 +1,16 @@
 @import './scss/theme';
 @import './scss/colors';
 @import './scss/variables';
+@import './scss/general';
 
 // Bootstrap node module imports.
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-//@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/reboot";
 //@import "~bootstrap/scss/type";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/grid";
-
 
 /* General
 ==================================== */
@@ -21,4 +21,8 @@ body {
     font-family: proxima-nova, sans-serif;
     background: $neutral-white;
     color: $neutral-charcoal;
+}
+
+.active-link {
+  color: blue;
 }

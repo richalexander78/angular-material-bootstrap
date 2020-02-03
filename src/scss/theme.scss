@@ -2,6 +2,20 @@
 @import 'foundation-palettes';
 
 // Define a custom typography config that overrides the font-family.
+//   $display-4: mat-typography-level(32px, 48px, 700),
+//   $display-3: mat-typography-level(32px, 48px, 700),
+//   $display-2: mat-typography-level(32px, 48px, 700),
+//   $display-1: mat-typography-level(32px, 48px, 700),
+//   $headline: mat-typography-level(32px, 48px, 700),
+//   $title: mat-typography-level(32px, 48px, 700),
+//   $subheading-2: mat-typography-level(32px, 48px, 700),
+//   $subheading-1: mat-typography-level(32px, 48px, 700),
+//   $body-1: mat-typography-level(16px, 24px, 500),
+//   $body-2: mat-typography-level(16px, 24px, 500),
+//   $caption: mat-typography-level(16px, 24px, 500),
+//   $button: mat-typography-level(16px, 24px, 500),
+//   $input: mat-typography-level(16px, 24px, 500),
+
 $custom-typography: mat-typography-config(
   $font-family: 'proxima-nova, sans-serif',
 );
@@ -16,7 +30,7 @@ $custom-typography: mat-typography-config(
 
 // Define the palettes for your theme using the Foundation palettes available in foundation-palette.scss
 // For each palette, you can optionally specify a default, lighter, and darker hue
-$angular-material-io-primary: mat-palette($mat-primary-purple, 900);
+$angular-material-io-primary: mat-palette($mat-primary-purple, 500, 100, 900);
 $angular-material-io-accent: mat-palette($mat-secondary-blue);
 $angular-material-io-warn: mat-palette($mat-danger-red);
 
