@@ -4,12 +4,18 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar color="neutral-lightest">Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-toolbar color="neutral-lightest">Logo</mat-toolbar>
+    <mat-nav-list >
       <a mat-list-item routerLink="/typography" routerLinkActive="active-link">Typography</a>
       <a mat-list-item routerLink="/cards" routerLinkActive="active-link">Cards</a>
-      <a mat-list-item href="#">Link</a>
-      <a mat-list-item href="#">Link</a>
+      <mat-expansion-panel class="mat-elevation-z0 p-0">
+        <mat-expansion-panel-header>
+            Expansion Panel
+        </mat-expansion-panel-header>
+        <a mat-list-item href="#">Link</a>
+        <a mat-list-item href="#">Link</a>
+      </mat-expansion-panel>
+      <!-- <a mat-list-item href="#">Link</a> -->
     </mat-nav-list>
   </mat-sidenav>
 
@@ -17,7 +23,7 @@
         *ngIf="isHandset$ | async"
   -->
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" class="mat-elevation-z2">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -25,16 +31,16 @@
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>angular-material-io</span>
+      <span>angular-material-bootstrap</span>
     </mat-toolbar>
 
     <main class="py-4 py-md-5">
-      <div class="container mat-typography">
+      <div class="container">
         <router-outlet></router-outlet>
       </div>
     </main>
 
-    <!-- <ng-content></ng-content> -->
+    <ng-content></ng-content>
     <app-footer></app-footer>
   </mat-sidenav-content>
   

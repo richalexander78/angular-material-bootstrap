@@ -1,28 +1,77 @@
-@import './scss/theme';
-@import './scss/colors';
 @import './scss/variables';
-@import './scss/general';
+@import './scss/theme';
 
-// Bootstrap node module imports.
+
+// Bootstrap
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
-//@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/type";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/grid";
+
 
 /* General
 ==================================== */
 
 html, body { height: 100%; }
-body {
-    margin: 0;
-    font-family: proxima-nova, sans-serif;
-    background: $neutral-white;
-    color: $neutral-charcoal;
+
+body { font-size: $xl-paragraph; }
+
+
+/* Typography
+==================================== */
+
+.headline {
+  font-size: $display1-size;
+  font-weight: $font-weight-bolder;
+  line-height: $line-height-base;
 }
 
-.active-link {
-  color: blue;
+.hero {
+  font-size: $display2-size;
+  font-weight: $headings-font-weight;
+  line-height: $line-height-base;
 }
+
+.font-weight-medium{ font-weight: $font-weight-medium; }
+.font-weight-semibold { font-weight: $font-weight-semibold; }
+.font-weight-black { font-weight: $font-weight-black; }
+
+.xl-paragraph { font-size: $xl-paragraph; }
+.lg-paragraph { font-size: $lg-paragraph; }
+.md-paragraph { font-size: $md-paragraph;}
+.sm-paragraph { font-size: $sm-paragraph; }
+
+
+/* Side Navigation
+==================================== */
+.sidenav {
+  .mat-drawer-inner-container {
+    .mat-nav-list {
+      .mat-expansion-panel {
+        border-radius:0px;
+        .mat-expansion-panel-header { 
+          font-size: 1rem;
+          padding:0 16px;
+        }
+        .mat-expansion-panel-content {
+          .mat-expansion-panel-body {
+            padding: 0; 
+            .mat-list-item {
+              color: blue;
+              .mat-list-item-content {
+                padding: 0 0 0 32px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+  
