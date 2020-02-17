@@ -1,30 +1,47 @@
 @import 'colors';
 
 
-/* Color System
-==================================== */
+// ================================================
+// Functions
+// ================================================
+
+// px-to-rem
+@function rem($target, $context: $font-size-base) {
+  @return ($target / $context) * 1rem;
+}
+
+
+// ================================================
+// Color System
+// ================================================
 
 //$primary:  ;
 
 
-/* Body
-==================================== */
+// ================================================
+// body
+// ================================================
 
 $body-color: $neutral-charcoal;
 
 
-/* Links
-==================================== */
+// ================================================
+// Links
+// ================================================
 
 // $link-hover-color: darken($link-color, 15%);
 // $link-hover-decoration: underline;
 
 
-/* Typography
-==================================== */
+// ================================================
+// Typography
+// ================================================
 
 $font-family-base: proxima-nova, sans-serif;
 $font-size-base: 1rem;
+$line-height-base: 1.25;
+
+// font-weights
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
@@ -32,14 +49,15 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-bolder: 800;
 $font-weight-black: 900;
-$line-height-base: 1.25;
 
+// paragraphs
 $xl-paragraph: $font-size-base * 1.125;
 $lg-paragraph: $font-size-base * 0.9375;
 $md-paragraph: $font-size-base * 0.875;
 $sm-paragraph: $font-size-base * 0.8125;
 $paragraph-margin-bottom: 1.125rem;
 
+// headings
 $h1-font-size: $font-size-base * 2;
 $h2-font-size: $font-size-base * 1.75;
 $h3-font-size: $font-size-base * 1.5;
@@ -47,7 +65,7 @@ $h4-font-size: $font-size-base * 1.313;
 $h5-font-size: $font-size-base * 1.125;
 $h6-font-size: $font-size-base * 1;
 
-$headings-font-weight: 700;
+$headings-font-weight: $font-weight-bold;
 $headings-line-height: $line-height-base;
 
 $display1-size: $font-size-base * 2.625;
@@ -62,8 +80,11 @@ $display2-size: $font-size-base *  2.375;
 // $kbd-bg: ;
 
 
-/* Utilities - Spacing
-==================================== */
+// ================================================
+// Utilities
+// ================================================
+
+// Spacing
 $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge(
@@ -84,8 +105,10 @@ $spacers: map-merge(
 );
 
 
-/* Grid Layout
-==================================== */
+// ================================================
+// Grid
+// ================================================
+
 $grid-gutter-width: 48px;
 
 // $grid-breakpoints: (

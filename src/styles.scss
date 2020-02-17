@@ -1,7 +1,6 @@
 @import './scss/variables';
 @import './scss/theme';
 
-
 // Bootstrap
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -12,17 +11,19 @@
 @import "~bootstrap/scss/grid";
 
 
-/* General
-==================================== */
+// ================================================
+// General
+// ================================================
 
 html, body { height: 100%; }
-
 body { font-size: $xl-paragraph; }
 
 
-/* Typography
-==================================== */
+// ================================================
+// Typography
+// ================================================
 
+// headings
 .headline {
   font-size: $display1-size;
   font-weight: $font-weight-bolder;
@@ -35,18 +36,23 @@ body { font-size: $xl-paragraph; }
   line-height: $line-height-base;
 }
 
+// font weights
 .font-weight-medium{ font-weight: $font-weight-medium; }
 .font-weight-semibold { font-weight: $font-weight-semibold; }
 .font-weight-black { font-weight: $font-weight-black; }
 
+// paragraphs
 .xl-paragraph { font-size: $xl-paragraph; }
 .lg-paragraph { font-size: $lg-paragraph; }
 .md-paragraph { font-size: $md-paragraph;}
 .sm-paragraph { font-size: $sm-paragraph; }
 
 
-/* Side Navigation
-==================================== */
+// ================================================
+// Navigation
+// ================================================
+
+// side drawer
 .sidenav {
   .mat-drawer-inner-container {
     .mat-nav-list {
@@ -60,7 +66,7 @@ body { font-size: $xl-paragraph; }
           .mat-expansion-panel-body {
             padding: 0; 
             .mat-list-item {
-              color: blue;
+              // color: blue;
               .mat-list-item-content {
                 padding: 0 0 0 32px;
               }
