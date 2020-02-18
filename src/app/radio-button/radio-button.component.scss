@@ -1,0 +1,16 @@
+@import '../../scss/_variables';
+
+.question {
+  font-size: 18px;
+  color: $neutral-gray-darkest;
+  margin-bottom: 20px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 4rem;
+}
+
+.mat-error {
+  color: $warning-orange;
+  font-size: $sm-paragraph;
+}

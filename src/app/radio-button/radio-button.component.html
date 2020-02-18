@@ -1,0 +1,21 @@
+<div class="question-answer">
+
+  <!-- <div class="question font-weight-semibold">
+    Are there any outstanding judgments against you.
+  </div> -->
+
+  <label id="example-question" class="question font-weight-semibold">Are there any outstanding judgments against you.</label>
+
+  <div class="answer">
+    <mat-radio-group aria-labelledby="example-question" [(ngModel)]="possibleAnswers" [formControl]="answerControl" required>
+      <mat-radio-button *ngFor="let answer of answers" [value]="answer">
+        {{ answer }}
+      </mat-radio-button>
+    </mat-radio-group>
+    <mat-error class="d-flex" *ngIf="answerControl.hasError('required')">Please make a selection</mat-error>
+    <!-- <div>Your answer is: <b>{{ possibleAnswers }}</b></div> -->
+  </div>
+
+  <button mat-flat-button type="button" (click)="getErrorMessage()" color="primary" class="mt-10">Submit</button>
+
+</div>

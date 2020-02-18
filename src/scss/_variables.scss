@@ -109,24 +109,30 @@ $spacers: map-merge(
 // Grid
 // ================================================
 
-$grid-gutter-width: 48px;
+// $grid-gutter-width: 48px;
+$grid-gutter-widths: (
+  xs: 16px,
+  /* "sm" takes the same width as "xs" automatically */
+  md: 24px,
+  lg: 24px
+);
 
-// $grid-breakpoints: (
-//   // Extra small screen / phone
-//   xs: 0,
-//   // Small screen / phone
-//   sm: 576px,
-//   // Medium screen / tablet
-//   md: 768px,
-//   // Large screen / desktop
-//   lg: 992px,
-//   // Extra large screen / wide desktop
-//   xl: 1300px
-// );
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1328px
+);
 
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1280px
-// );
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1280px
+);
