@@ -6,16 +6,19 @@ import {FormControl, Validators} from '@angular/forms';
   templateUrl: './radio-button.component.html',
   styleUrls: ['./radio-button.component.scss']
 })
+
 export class RadioButtonComponent implements OnInit {
+  question = 'Are you presently delinquent or in default on any Federal debt or any other loan, mortgage, financial obligation, bond, or loan guarantee?';
 
   possibleAnswers: string;
-  answers: string[] = ['No', 'Yes'];
+  answers = ['No', 'Yes'];
+  
   answerControl = new FormControl('', [Validators.required]);
+
+  message = "Please make a selection";
+  errorMessage: string;
   getErrorMessage() {
-    if (this.answerControl.invalid) {
-      this.answerControl.markAsTouched();
-      return;
-    }
+    this.errorMessage = this.message;
   }
 
   constructor() { }

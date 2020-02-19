@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+  <div class="col-sm-10 col-xl-6">
+    
+    <div class="example-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Your email</mat-label>
+        <input matInput placeholder="email@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+  </div>
+</div>
+

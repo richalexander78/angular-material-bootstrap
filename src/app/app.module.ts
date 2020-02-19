@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { RadioButtonComponent } from './radio-button/radio-button.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +18,6 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
     routingComponents,
     NavbarComponent,
     FooterComponent,
-    RadioButtonComponent,
   ],
   imports: [
     BrowserModule,
