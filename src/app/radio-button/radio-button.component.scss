@@ -1,19 +1,11 @@
 @import '../../scss/_variables';
 
-// .question-answer {
-//   margin-bottom: 64px;
-// }
-
 .question {
-  color: $neutral-gray-darkest;
+  // color: $neutral-gray-darkest;
   margin-bottom: 20px;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
 }
 
-.mat-radio-button ~ .mat-radio-button {
-  margin-left: 4rem;
-}
+.mat-radio-button ~ .mat-radio-button { margin-left: 4rem; }
 
-.mat-error {
-  color: $warning-orange;
-  font-size: $sm-paragraph;
-}

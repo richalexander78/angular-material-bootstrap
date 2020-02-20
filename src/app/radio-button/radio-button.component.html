@@ -1,13 +1,19 @@
 <div class="row justify-content-center">
   <div class="col-sm-10 col-xl-6">
 
-    <form class="question-answer">
-      <label id="example-question" class="question font-weight-semibold">{{question}}</label>
-      <mat-radio-group aria-labelledby="example-question" [(ngModel)]="possibleAnswers" [formControl]="answerControl" required>
-        <mat-radio-button *ngFor="let answer of answers" [value]="answer">{{answer}}</mat-radio-button>
+    <form novalidate>
+      <label id="radio-question" class="question">{{question}}</label>
+      <mat-radio-group
+        aria-labelledby="radio-question"
+        [(ngModel)]="possibleAnswers"
+        [formControl]="answerControl"
+        required >
+        <mat-radio-button *ngFor="let answer of answers" [value]="answer">
+          {{answer}}
+        </mat-radio-button>
       </mat-radio-group>
       <mat-error class="d-flex" *ngIf="answerControl.hasError('required')">{{errorMessage}}</mat-error>
-      <!-- <div>Your answer is: <b>{{ possibleAnswers }}</b></div> -->
+      <!-- <div class="mt-4">Your answer is: <b>{{ possibleAnswers }}</b></div> -->
     </form> <!-- /.question-answer -->
 
     <button mat-flat-button type="button" (click)="getErrorMessage()" color="primary" class="mt-10">Submit</button>

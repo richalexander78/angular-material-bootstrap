@@ -1,0 +1,17 @@
+@import '../../scss/_variables';
+
+footer {
+  background-color: $primary-purple;
+  font-size: $md-paragraph;
+  font-weight: $font-weight-normal;
+  color: $neutral-white;
+}
+
+.footer-link {
+  color: inherit;
+  ~ .footer-link {
+    margin-left: 1rem;
+    border-left: 1px solid;
+    padding-left: 1rem;
+  }
+}

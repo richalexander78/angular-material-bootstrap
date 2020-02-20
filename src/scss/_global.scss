@@ -1,0 +1,74 @@
+// ================================================
+// General
+// ================================================
+
+html, body { height: 100%; }
+body { font-size: $xl-paragraph; }
+
+
+// ================================================
+// Typography
+// ================================================
+
+// headings
+.headline {
+  font-size: $display1-size;
+  font-weight: $font-weight-bolder;
+  line-height: $line-height-base;
+}
+
+.hero {
+  font-size: $display2-size;
+  font-weight: $headings-font-weight;
+  line-height: $line-height-base;
+}
+
+// font weights
+.font-weight-medium { font-weight: $font-weight-medium; }
+.font-weight-semibold { font-weight: $font-weight-semibold; }
+.font-weight-black { font-weight: $font-weight-black; }
+
+// paragraphs
+.xl-paragraph { font-size: $xl-paragraph; }
+.lg-paragraph { font-size: $lg-paragraph; }
+.md-paragraph { font-size: $md-paragraph;}
+.sm-paragraph { font-size: $sm-paragraph; }
+.xs-paragraph { font-size: $xs-paragraph; }
+
+.caption, 
+.mat-error {
+  font-size: $xs-paragraph;
+  font-weight: $font-weight-medium;
+  letter-spacing: .4px;
+}
+
+
+// ================================================
+// Navigation
+// ================================================
+
+// side drawer
+.sidenav {
+  .mat-drawer-inner-container {
+    .mat-nav-list {
+      .mat-expansion-panel {
+        border-radius:0px;
+        .mat-expansion-panel-header { 
+          font-size: 1rem;
+          padding:0 16px;
+        }
+        .mat-expansion-panel-content {
+          .mat-expansion-panel-body {
+            padding: 0; 
+            .mat-list-item {
+              // color: blue;
+              .mat-list-item-content {
+                padding: 0 0 0 32px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
