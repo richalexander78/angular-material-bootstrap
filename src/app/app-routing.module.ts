@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'radio-button', component: RadioButtonComponent },
   { path: 'question-list', component: QuestionListComponent },
   { path: 'form-field', component: FormFieldComponent },
-  { path: 'form-field', component: GridComponent },
+  { path: 'grid', component: GridComponent },
 ];
 
 @NgModule({
