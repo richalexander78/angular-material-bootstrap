@@ -8,9 +8,9 @@ $custom-typography: mat-typography-config(
 @include angular-material-typography($custom-typography);
 
 // For each palette, you can optionally specify a default, lighter, and darker hue
-$theme-primary: mat-palette($mat-primary-purple, 500, 100, 900);
-$theme-accent: mat-palette($mat-secondary-blue);
-$theme-warn: mat-palette($mat-warning-orange);
+// $theme-primary: mat-palette($mat-primary-purple, 500, 100, 900);
+// $theme-accent: mat-palette($mat-secondary-blue);
+// $theme-warn: mat-palette($mat-warning-orange);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $my-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);

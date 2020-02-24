@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ScrollTopComponent } from './scroll-top/scroll-top.component';
+import { MaterialElevationDirective } from './material-elevation.directive';
+import { CustomIconService } from "./services/custom-icon.service";
 
 
 @NgModule({
@@ -18,6 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     routingComponents,
     NavbarComponent,
     FooterComponent,
+    ScrollTopComponent,
+    MaterialElevationDirective
   ],
   imports: [
     BrowserModule,
@@ -27,8 +33,11 @@ import { FooterComponent } from './footer/footer.component';
     MaterialModule,
     ReactiveFormsModule,
     LayoutModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CustomIconService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

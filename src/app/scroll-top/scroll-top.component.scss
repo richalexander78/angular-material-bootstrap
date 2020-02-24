@@ -1,0 +1,22 @@
+@import "../../scss/variables";
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 32px;
+  img {
+    width: 24px;
+  }
+ }
+
+ .mat-fab.mat-accent {
+  background-color: $primary-50;
+  // background-color: rgba(0,116,217,0.1);
+  color: $primary;
+ }
+
+//  .mat-fab .mat-button-wrapper {
+//   padding: px 0;
+//   display: inline-block;
+//   line-height: 0;
+// }

@@ -36,11 +36,11 @@
       <span>angular-material-bootstrap</span>
     </mat-toolbar>
 
-    <main class="container py-6 pt-md-9 pb-md-10">
-      <router-outlet></router-outlet>
+    <main class="container wrapper py-6 pt-md-9 pb-md-10">
+      <router-outlet (activate)="onActivate($event)"></router-outlet>
     </main>
 
-    <ng-content></ng-content>
+    <!-- <ng-content></ng-content> -->
     
     <app-footer></app-footer>
   </mat-sidenav-content>
