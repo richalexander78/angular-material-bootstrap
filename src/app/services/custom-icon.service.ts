@@ -1,6 +1,10 @@
-import { DomSanitizer } from "@angular/platform-browser";
-import { MatIconRegistry } from "@angular/material/icon";
 import { Injectable } from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
+import { MatIconRegistry } from "@angular/material";
+
+
+// https://github.com/weihungchin/angular-material-custom-svg
+
 
 @Injectable()
 export class CustomIconService {
@@ -9,14 +13,9 @@ export class CustomIconService {
     private domSanitizer: DomSanitizer
   ) {}
   init() {
-    // this.matIconRegistry.addSvgIcon(
-    //   "cool_face",
-    //   this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/cool2.svg")
-    // );
-
-
-      this.matIconRegistry.addSvgIcon("chat",this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/chat.svg"));
-      this.matIconRegistry.addSvgIcon("chevron-left",this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/chevron-left.svg"));
-
+    this.matIconRegistry.addSvgIcon(
+      "chevron-left",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/chevron-left.svg")
+    );
   }
 }

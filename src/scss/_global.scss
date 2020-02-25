@@ -5,23 +5,25 @@
 html, body { height: 100%; }
 body { font-size: $xl-paragraph; }
 
-
 // butons
-.mat-icon svg {
-  vertical-align: baseline;
-}
-
-
-// sticky footer
-.wrapper {
-  min-height: calc(100vh - 187px);
-}
-
-@media (min-width: 576px) {
-  .wrapper {
-    min-height: calc(100vh - 129px);
+.mat-button  {
+  svg {
+    vertical-align: baseline;
+  }
+  .icon-small {
+    transform: scale(.7);
+    position: relative;
+    bottom: 1px;
   }
 }
+
+// sticky footer
+.wrapper { min-height: calc(100vh - 187px); }
+
+@media (min-width: 576px) {
+  .wrapper { min-height: calc(100vh - 129px); }
+}
+
 
 // ================================================
 // Typography

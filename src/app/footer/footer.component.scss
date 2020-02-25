@@ -8,6 +8,7 @@ footer {
 
 .footer-link {
   color: inherit;
+  font-weight: $font-weight-medium;
   ~ .footer-link {
     margin-left: 1rem;
     border-left: 1px solid;

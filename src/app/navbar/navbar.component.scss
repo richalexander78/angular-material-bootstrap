@@ -1,4 +1,4 @@
-@import '../../scss/_colors';
+@import '../../scss/variables';
 
 .sidenav-container { height: 100%; }
 
@@ -12,17 +12,9 @@
 //   z-index: 1;
 // }
 
-.active-link { color: $primary-purple }
+.active-link { color: $primary }
 
-
-
-
-
-
-
-
-
-
+.mat-button ~ .mat-button { margin-left: .5rem; }
 
 
 

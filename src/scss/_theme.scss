@@ -3,8 +3,8 @@
 
 $custom-typography: mat-typography-config(
   $font-family: $font-family-base,
+  $button: mat-typography-level(13px, 1.25, 500)
 );
-
 @include angular-material-typography($custom-typography);
 
 // For each palette, you can optionally specify a default, lighter, and darker hue

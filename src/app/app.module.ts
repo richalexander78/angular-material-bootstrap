@@ -13,7 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScrollTopComponent } from './scroll-top/scroll-top.component';
 import { MaterialElevationDirective } from './material-elevation.directive';
-import { CustomIconService } from "./services/custom-icon.service";
+// import { CustomIconService } from "./services/custom-icon.service";
 
 
 @NgModule({
@@ -36,7 +36,7 @@ import { CustomIconService } from "./services/custom-icon.service";
     HttpClientModule
   ],
   providers: [
-    CustomIconService,
+    // CustomIconService
   ],
   bootstrap: [AppComponent]
 })

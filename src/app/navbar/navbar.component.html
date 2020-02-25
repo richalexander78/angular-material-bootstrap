@@ -25,15 +25,21 @@
         *ngIf="isHandset$ | async"
   -->
   <mat-sidenav-content>
-    <mat-toolbar role="heading" color="primary" class="mat-elevation-z2">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>angular-material-bootstrap</span>
+    <mat-toolbar role="heading" color="primary" class="mat-elevation-z2 justify-content-between">
+      <div class="d-flex align-items-center">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>angular-material-bootstrap</span>
+      </div>
+      <div>
+        <button mat-button>Button Link</button>
+        <button mat-button>Button Link</button>
+      </div>
     </mat-toolbar>
 
     <main class="container wrapper py-6 pt-md-9 pb-md-10">
