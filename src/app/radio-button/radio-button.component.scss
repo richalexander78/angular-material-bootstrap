@@ -2,9 +2,11 @@
 
 .question {
   color: $neutral-gray-darkest;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   font-weight: $font-weight-semibold;
   font-size: $font-size-base;
 }
+
+.mat-radio-button { color: $neutral-gray-darkest; }
 
 .mat-radio-button ~ .mat-radio-button { margin-left: 4rem; }

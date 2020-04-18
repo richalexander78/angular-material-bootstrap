@@ -3,33 +3,96 @@
 // ================================================
 
 html, body { height: 100%; }
-body { font-size: $xl-paragraph; }
+body { font-size: $font-size-xl; }
 
-// butons
-.mat-button  {
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+
+// **** icons **** //
+.mat-icon,
+.mat-list-base .mat-list-item .mat-list-icon {
   svg {
-    vertical-align: baseline;
-  }
-  .icon-small {
-    transform: scale(.7);
+    vertical-align: top;
     position: relative;
-    bottom: 1px;
+    top: -1px;
+  }
+  &.icon-xs {
+    height: 12px;
+    width: 12px;
+  }
+  &.icon-sm {
+    height: 16px;
+    width: 16px;
+  }
+  &.icon-md{
+    height: 20px;
+    width: 20px;
+  }
+  &.icon-lg {
+    height: 48px;
+    width: 48px;
+  }
+  &.icon-xl {
+    height: 65px;
+    width: 65px;
   }
 }
 
-// sticky footer
-.wrapper { min-height: calc(100vh - 187px); }
 
-@media (min-width: 576px) {
-  .wrapper { min-height: calc(100vh - 129px); }
+// .mat-list-base .mat-list-item .mat-list-icon {
+//   @extend .mat-icon;
+//   padding-right: 8px !important;
+// }
+
+
+// **** buttons **** //
+.mat-stroked-button {
+  border-color: $color-primary;
+  // border-width: 1.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
+
+// **** mat form fields **** //
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: .6em 0 1.1em 0;
+}
+
+.mat-form-field-label-wrapper {
+  top: -1em;
+  // padding-top: 1.1em;
+}
+
+.mat-form-field ::placeholder {
+  color: $neutral-gray-dark;
+  opacity: 1; /* Firefox */
+}
+
+/* Chrome/Opera/Safari */ 
+::-webkit-input-placeholder { color:$neutral-gray-darkest; }
+
+/* Firefox 19+ */
+::-moz-placeholder { color:$neutral-gray-darkest; }
+
+/* Firefox 18- */
+:-moz-placeholder { color: $neutral-gray-darkest; }
+
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder { color: $neutral-gray-darkest; }
+
+/* Microsoft Edge */
+::-ms-input-placeholder { color: $neutral-gray-darkest; }
 
 
 // ================================================
 // Typography
 // ================================================
 
-// headings
+// **** headings **** //
 .headline {
   font-size: $display1-size;
   font-weight: $font-weight-bolder;
@@ -42,28 +105,105 @@ body { font-size: $xl-paragraph; }
   line-height: $line-height-base;
 }
 
-// font weights
+// **** font weights **** //
+.font-weight-normal { font-weight: $font-weight-normal; }
 .font-weight-medium { font-weight: $font-weight-medium; }
 .font-weight-semibold { font-weight: $font-weight-semibold; }
 .font-weight-black { font-weight: $font-weight-black; }
 
-// paragraphs
-.xl-paragraph { font-size: $xl-paragraph; }
-.lg-paragraph { font-size: $lg-paragraph; }
-.md-paragraph { font-size: $md-paragraph;}
-.sm-paragraph { font-size: $sm-paragraph; }
-.xs-paragraph { font-size: $xs-paragraph; }
+// **** prargraphs **** //
+.font-size-xl { font-size: $font-size-xl; }
+.font-size-lg { font-size: $font-size-lg; }
+.font-size-md { font-size: $font-size-md;}
+.font-size-sm { font-size: $font-size-sm; }
+.font-size-xs { font-size: $font-size-xs; }
 
-.caption, 
+.caption,
+.mat-hint, 
 .mat-error {
-  font-size: $xs-paragraph;
+  font-size: $font-size-sm;
   font-weight: $font-weight-medium;
   letter-spacing: .4px;
 }
 
 
 // ================================================
-// Grid
+// Elements
+// ================================================
+
+// **** cards **** //
+.card {
+  border-color: $neutral-gray-light;
+  &-body{ padding: 24px; }
+}
+
+.card-subtitle {
+  &_xs {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  } 
+}
+
+.card-footer {
+  border-color: $neutral-gray-light;
+}
+
+
+// **** dividers **** //
+.additional-divider {
+	position: relative;
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  
+  &:before {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $neutral-gray;
+    content: "";
+  }
+
+  & span {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #fff;
+    border: 1px solid $neutral-gray;
+    border-radius: 4px;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $neutral-gray;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+
+// ================================================
+// Components
+// ================================================
+
+
+
+
+// ================================================
+// Navigation
+// ================================================
+
+// **** subheader ****//
+.subheader {
+  min-height: 64px;
+  background-color: $neutral-white;
+}
+
+
+// ================================================
+// Grid / Layout
 // ================================================
 .container, 
 .container-fluid {
@@ -79,33 +219,22 @@ body { font-size: $xl-paragraph; }
   }
 }
 
+// **** sticky footer **** //
+main { flex: 1 0 auto; }
 
-// ================================================
-// Navigation
-// ================================================
+// **** application layout **** //
+.application-wrapper {
+  @include make-col-ready();
 
-// side drawer
-.sidenav {
-  .mat-drawer-inner-container {
-    .mat-nav-list {
-      .mat-expansion-panel {
-        border-radius:0px;
-        .mat-expansion-panel-header { 
-          font-size: 1rem;
-          padding:0 16px;
-        }
-        .mat-expansion-panel-content {
-          .mat-expansion-panel-body {
-            padding: 0; 
-            .mat-list-item {
-              // color: blue;
-              .mat-list-item-content {
-                padding: 0 0 0 32px;
-              }
-            }
-          }
-        }
-      }
-    }
+  @include media-breakpoint-up(lg) {
+    @include make-col(9);
+  }
+  @include media-breakpoint-up(xl) {
+    @include make-col(7);
   }
 }
+
+
+
+
+

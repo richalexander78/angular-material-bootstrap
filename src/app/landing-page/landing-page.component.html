@@ -1,0 +1,267 @@
+<!-- header -->
+<mat-toolbar role="heading" color="primary" class="bg-primary-900">
+  <div class="brand">AM & BS4</div>
+  <div class="ml-auto d-none d-sm-inline">
+    <button mat-button [matMenuTriggerFor]="menu">Dropdown</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <a mat-button>Button Link</a>
+  </div>
+</mat-toolbar> <!-- end header -->
+
+
+<!-- hero-image -->
+<section class="hero-image d-flex align-items-center align-items-md-start justify-content-center">
+  <!-- hero text -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="hero-text">
+          <h2 class="hero-text__title">Your homebuying journey made easy.</h2>
+          <h4 class="hero-text__subtitle">Choose your path and we’ll guide you through the mortgage process.</h4>
+        </div>
+      </div>
+    </div> <!-- end row -->
+  </div> <!-- end container-fluid -->
+
+  <!-- hero path tabs -->
+  <!-- <div class="container-fluid path-tabs-container">
+      <div class="row justify-content-center">
+
+        <div class="col-11 col-sm-8 col-md-4 col-xl-3">
+          <div class="path-tab path-tab__active">
+            <div class="icon-background icon-background_xl">
+              <mat-icon svgIcon="money-check-alt-light" color="primary" class="icon-xl"></mat-icon>
+            </div>
+            <h3>Purchase</h3>
+          </div>
+        </div>
+
+        <div class="col-11 col-sm-8 col-md-4 col-xl-3 d-none d-md-inline">
+          <div class="path-tab">
+            <div class="icon-background icon-background_xl">
+              <mat-icon svgIcon="home-light" color="primary" class="icon-xl"></mat-icon>
+            </div>
+            <h3>Refinance</h3>
+          </div>
+        </div>
+
+        <div class="col-11 col-sm-8 col-md-4 col-xl-3 d-none d-md-inline">
+          <div class="path-tab">
+            <div class="icon-background icon-background_xl">
+              <mat-icon svgIcon="hand-holding-usd-light" color="primary" class="icon-xl"></mat-icon>
+            </div>
+            <h3>Use My Equity</h3>
+          </div>
+        </div>
+
+    </div>
+  </div>  -->
+</section> <!-- end hero-image -->
+
+
+<!-- path tabs & options -->
+<mat-tab-group mat-stretch-tabs mat-align-tabs="center">
+
+  <mat-tab label="Purchase">
+    <ng-template mat-tab-label>
+      <div class="path-tab">
+        <div class="icon-background icon-background_lg mb-3">
+          <mat-icon svgIcon="money-check-alt-light" color="primary" class="icon-lg"></mat-icon>
+        </div>
+        <h3>Purchase</h3>
+      </div>
+    </ng-template>
+    
+    <section id="purchase-options" class="py-10 bg-primary">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+
+          <div class="col-11 col-sm-8 col-md-4 col-xl-3 bottom-margin" *ngFor="let option of purchase">
+            <div class="card border-0 bg-transparent text-white text-center equal-height">
+              <div class="card-body">
+                <h3 class="dropped-underline">{{option.title}}</h3>
+                <!-- <mat-icon svgIcon="info-circle" class="icon-sm"></mat-icon> -->
+                <p class="card-text" [innerHTML]='option.content'></p>
+              </div>
+              <div class="card-footer border-0 bg-transparent">
+                <button mat-stroked-button class="border-white">Get Started</button>
+              </div>
+            </div>
+          </div> <!-- end col -->
+
+        </div> <!-- end row -->
+      </div> <!-- end container-fluid -->
+    </section> <!-- end purchase-options -->
+  </mat-tab>  <!-- end Purchase -->
+
+
+  <mat-tab label="Refinance">
+    <ng-template mat-tab-label>
+      <div class="path-tab">
+        <div class="icon-background icon-background_lg mb-3">
+          <mat-icon svgIcon="home-light" color="primary" class="icon-lg"></mat-icon>
+        </div>
+        <h3>Refinance</h3>
+      </div>
+    </ng-template>
+
+    <section id="refinance-options" class="py-10 bg-primary">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+
+          <div class="col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4 bottom-margin" *ngFor="let option of refinance">
+            <div class="card border-0 bg-transparent text-white text-center equal-height purchase-option">
+              <div class="card-body">
+                <h3 class="dropped-underline">{{option.title}}</h3>
+                <!-- <mat-icon svgIcon="info-circle" class="icon-sm"></mat-icon> -->
+                <p class="card-text" [innerHTML]='option.content'></p>
+              </div>
+              <div class="card-footer border-0 bg-transparent">
+                <button mat-stroked-button class="border-white">Get Started</button>
+              </div>
+            </div>
+          </div> <!-- end col -->
+
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </section> <!-- end refinance-options -->
+  </mat-tab> <!-- end Refinance -->
+
+
+  <mat-tab label="Equity">
+    <ng-template mat-tab-label>
+      <div class="path-tab">
+        <div class="icon-background icon-background_lg mb-3">
+          <mat-icon svgIcon="hand-holding-usd-light" color="primary" class="icon-lg"></mat-icon>
+        </div>
+        <h3>Use My Equity</h3>
+      </div>
+    </ng-template>
+
+    <section id="equity-options" class="py-10 bg-primary">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+
+          <div class="col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4 bottom-margin" *ngFor="let option of equity">
+            <div class="card border-0 bg-transparent text-white text-center equal-height purchase-option">
+              <div class="card-body">
+                <h3 class="dropped-underline">{{option.title}}</h3>
+                <!-- <mat-icon svgIcon="info-circle" class="icon-sm"></mat-icon> -->
+                <p class="card-text" [innerHTML]='option.content'></p>
+              </div>
+              <div class="card-footer border-0 bg-transparent">
+                <button mat-stroked-button class="border-white">Get Started</button>
+              </div>
+            </div>
+          </div> <!-- end col -->
+
+        </div> <!-- end row -->
+      </div> <!-- end container-fluid -->
+    </section> <!-- end equity-options -->
+  </mat-tab> <!-- end Equity -->
+
+</mat-tab-group> <!-- end path options -->
+
+
+<!-- why choose us -->
+<section id="why-choose-us" class="section-padding text-center">
+  <div class="container-fluid">
+
+    <h2 class="section-title">Why Choose Us?</h2>
+
+    <div class="row justify-content-center">
+
+      <div class="col-11 col-sm-8 col-md-6 col-lg-3 bottom-margin" *ngFor="let option of value">
+        <div class="card border-0 text-center equal-height">
+          <div class="card-body">
+            <mat-icon svgIcon="{{option.icon}}" color="primary" class="icon-lg d-block mx-auto mb-6"></mat-icon>
+            <h3 class="card-title">{{option.title}}</h3>
+            <p class="card-text" [innerHTML]='option.content'></p>
+          </div>
+        </div>
+      </div> <!-- end col -->
+
+
+    </div> <!-- end row -->
+  </div> <!-- end container-fluid -->
+</section> <!-- end why-choose-us -->
+ 
+
+<!-- benefits -->
+<section id="benefits" class="section-padding bg-accent" >
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+
+      <div class="col-11 col-sm-8 col-md-4 col-xl-3 bottom-margin" *ngFor="let benefit of benefits">
+        <div class="card border-0 text-center equal-height">
+          <div class="card-body py-8">
+            <div class="icon-background icon-background_xl mb-6">
+              <mat-icon svgIcon="{{benefit.icon}}" color="primary" class="icon-xl"></mat-icon>
+            </div>
+            <h2 class="card-title">{{benefit.title}}</h2>
+            <p class="card-text" [innerHTML]='benefit.content'></p>
+          </div>
+        </div>
+      </div> <!-- end col -->
+
+    </div> <!-- end row -->
+  </div> <!-- end container-fluid -->
+</section> <!-- end benefits -->
+
+
+<!-- contact -->
+<section id="contact" class="section-padding">
+  <div class="container-fluid">
+
+    <h2 class="section-title">Still Have Questions?</h2>
+
+    <div class="row justify-content-center">
+
+      <div class="col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4 bottom-margin">
+        <div class="card border-0 text-center equal-height">
+          <div class="card-body">
+            <h3 class="card-title">Let Us Contact You</h3>
+            <!-- <mat-icon svgIcon="info-circle" class="icon-sm"></mat-icon> -->
+            <p class="card-text">Have a home mortgage consultant call you back or schedule your free consultation.</p>
+          </div>
+          <div class="card-footer border-0 bg-transparent">
+            <button mat-stroked-button color="primary">Schedule Consultation</button>
+          </div>
+        </div>
+      </div> <!-- end col -->
+
+      <div class="vertical-divider d-none d-lg-flex">
+        <div class="vertical-divider__inner"></div>
+      </div>
+
+      <div class="col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+        <div class="card border-0 bg-transparent text-center equal-height">
+          <div class="card-body">
+            <h3 class="card-title">Talk to a Loan Officer</h3>
+            <!-- <mat-icon svgIcon="info-circle" class="icon-sm"></mat-icon> -->
+            <a href="tel:+01-904-123-4567" class="h3">904-123-4567</a>            
+            <div class="my-2"><span class="font-weight-semibold">Mon-Fri</span> &#8226; 8 a.m. – 10 p.m. ET</div>
+            <div><span class="font-weight-semibold">Sat</span> &#8226; 8 a.m. – 6:30 p.m. ET</div>
+          </div>
+        </div>
+      </div> <!-- end col -->
+
+    </div> <!-- end row -->
+  </div> <!-- end container-->
+</section> <!-- end contact -->
+
+
+<!-- footer -->
+<footer class="py-6 bg-primary-900">
+  <div class="container-fluid d-flex align-items-center flex-column flex-sm-row justify-content-center justify-content-sm-between">
+    <div class="order-3 order-sm-1">© 2020 Company, Inc.</div>
+    <div class="order-2 py-4 py-sm-0">
+      <a class="footer__link" href="#">Terms</a>
+      <a class="footer__link" href="#">Policy</a>
+    </div>
+    <div class="footer__link order-1 order-sm-3">1-800-555-5555</div>
+  </div>
+</footer> <!-- end footer -->

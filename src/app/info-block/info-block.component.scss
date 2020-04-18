@@ -1,0 +1,16 @@
+@import '../../scss/variables';
+
+
+.info-panel {
+  background-color: $color-accent-50;
+  border: 1px solid $color-accent;
+  border-radius: $border-radius;
+
+  p {
+    font-weight: $font-weight-semibold;
+    margin-bottom: 0;
+  }
+
+  // @media (max-width: 576px) { font-size: $font-size-lg; }
+}
+

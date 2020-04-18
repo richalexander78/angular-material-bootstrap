@@ -1,54 +1,104 @@
+<!-- Used on button tag to display menu icon for mobile
+      *ngIf="isHandset$ | async"
+-->
+
+<!-- header -->
+<mat-toolbar role="heading" color="primary" class="fixed-top">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()">
+    <mat-icon svgIcon="bars" class="icon-medium" aria-label="Side nav toggle icon"></mat-icon>
+  </button>
+  <div class="brand pl-3">AM & BS4</div>
+  <div class="ml-auto d-none d-sm-inline">
+    <button mat-button [matMenuTriggerFor]="menu">Dropdown</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <a mat-button>Button Link</a>
+  </div>
+</mat-toolbar>
+
+
+<!-- sidenav container -->
 <mat-sidenav-container class="sidenav-container">
 
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+  <!-- navigation drawer -->
+  <mat-sidenav #drawer 
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar color="neutral-lightest">Logo</mat-toolbar>
-    <mat-nav-list >
-      <a mat-list-item routerLink="/typography" routerLinkActive="active-link">Typography</a>
+      
+    <mat-toolbar color="accent" class="sticky-top">Menu Title</mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/typography" routerLinkActive="active-link">
+        <mat-icon mat-list-icon svgIcon="bars" class="icon-sm" ></mat-icon>
+        <div mat-line>Typography</div>
+      </a>
+      <!-- <mat-divider class="mat-list-item-divider"></mat-divider> -->
+      <a mat-list-item routerLink="/api" routerLinkActive="active-link">API</a>
       <a mat-list-item routerLink="/grid" routerLinkActive="active-link">Grid</a>
+      <a mat-list-item routerLink="/expansion-panel" routerLinkActive="active-link">Expansion Panel</a>
+      <a mat-list-item routerLink="/contact-card" routerLinkActive="active-link">Contact Card</a>
+      <a mat-list-item routerLink="/info-block" routerLinkActive="active-link">Info Block</a>
       <a mat-list-item routerLink="/question-list" routerLinkActive="active-link">Question List</a>
       <a mat-list-item routerLink="/form-field" routerLinkActive="active-link">Form Field</a>
       <mat-expansion-panel class="mat-elevation-z0 p-0">
-        <mat-expansion-panel-header>
+        <mat-expansion-panel-header expandedHeight="48px">
             Expansion Panel
         </mat-expansion-panel-header>
         <a mat-list-item href="#">Link</a>
         <a mat-list-item href="#">Link</a>
       </mat-expansion-panel>
-      <!-- <a mat-list-item href="#">Link</a> -->
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
+      <a mat-list-item href="#">Link</a>
     </mat-nav-list>
   </mat-sidenav>
 
-  <!-- Used on button to display menu icon
-        *ngIf="isHandset$ | async"
-  -->
-  <mat-sidenav-content>
-    <mat-toolbar role="heading" color="primary" class="mat-elevation-z2 justify-content-between">
-      <div class="d-flex align-items-center">
-        <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-        <span>angular-material-bootstrap</span>
+  <!-- site content -->
+  <mat-sidenav-content role="main">
+      <!-- subheader -->
+      <div class="row subheader sticky-top no-gutters p-3 border-bottom align-items-center justify-content-between" >
+        <a mat-button color="primary" routerLink="." class="text-uppercase">
+          <mat-icon class="icon-sm" svgIcon="angle-left"></mat-icon>
+          Prev
+        </a>
+        <h3 class="mb-0 text-center mx-auto">Introduction</h3>
+        <a mat-button color="primary" routerLink="." class="text-uppercase">
+          Next
+          <mat-icon class="icon-sm" svgIcon="angle-right"></mat-icon>
+        </a>
       </div>
-      <div>
-        <button mat-button>Button Link</button>
-        <button mat-button>Button Link</button>
-      </div>
-    </mat-toolbar>
 
-    <main class="container wrapper py-6 pt-md-9 pb-md-10">
-      <router-outlet (activate)="onActivate($event)"></router-outlet>
-    </main>
+      <!-- page content -->
+      <main class="container mb-10 py-6 pt-md-9 pb-md-10">
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
+      </main>
 
-    <!-- <ng-content></ng-content> -->
-    
-    <app-footer></app-footer>
+      <!-- <ng-content></ng-content> -->
+
+      <!-- sticky footer -->
+      <app-footer></app-footer>
   </mat-sidenav-content>
-  
+
 </mat-sidenav-container>
+
+

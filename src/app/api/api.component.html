@@ -1,0 +1,28 @@
+<!-- <button mat-stroked-button color="primary" (click)="getConfig()">Get Posts</button>
+
+<div *ngFor="let item of data;
+             let myIndex = index;
+             let firstItem = first;
+             let lastItem = last;
+             let evenItem = even;
+             let oddItem = odd;"
+             [ngClass]="{h4: evenItem, h3: oddItem, caption: firstItem, h6: lastItem}"     
+>
+  <div>{{myIndex}} {{item.title}} <span>{{item.lastName}}</span></div> 
+</div> -->
+
+
+<h1>Breweries</h1>
+<div *ngIf="brews" class="card-columns">
+  <div class="card" *ngFor="let brew of brews">
+    <div class="card-body">
+    <h4 class="card-title">{{ brew.name }}</h4>
+    <h6 class="card-subtitle card-subtitle_xs mb-2">{{ brew.city }}, {{ brew.state }}</h6>
+    <h6 class="card-subtitle card-subtitle_xs mb-2 text-muted">{{ brew.postal_code}}</h6>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div class="card-footer py-2 pl-2 bg-transparent">
+      <a mat-button color="primary" class="card-link text-uppercase" href="{{ brew.website_url }}" target="_blank">Website</a>
+    </div>
+  </div>
+</div>

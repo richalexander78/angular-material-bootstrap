@@ -1,0 +1,36 @@
+@import '../../scss/variables';
+
+
+  .card {
+    flex-direction: row;
+    &__contact-image {
+      min-width: 175px;
+      background-image: url(../../assets/images/loan-officer.jpg);
+      -ms-background-position-x: center;
+      -ms-background-position-y: center;
+      background-position: center center;
+      background-size: cover;
+    }
+  
+    &__contact-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 16px;
+    }
+  
+    &__contact-footer{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      padding-top: 12px;
+      border-top: 1px solid $neutral-gray-light;
+  
+      @media (min-width: 576px) { font-size: $font-size-md; }
+        
+      & a { font-weight:$font-weight-normal; }
+    }
+  }

@@ -1,0 +1,240 @@
+
+<!-- pos dashboard nested panel -->
+<div class="row justify-content-center">
+
+  <div class="col-12 col-lg-7">
+    <mat-accordion>
+      <div class="card card-loan-dashboard">
+        <!-- first parent expansion panel -->
+        <mat-expansion-panel class="expansion-panel expansion-panel__loan-dashboard expansion-panel__loan-dashboard_parent mat-elevation-z0">
+          <mat-expansion-panel-header collapsedHeight="88px" expandedHeight="88px">
+              <mat-icon color="primary" svgIcon="adjust" class="icon-status"></mat-icon>
+              <div class="parent-header-text">
+                <mat-panel-title>
+                Pre-Approval
+                </mat-panel-title>
+                <mat-panel-description class="d-inline-block d-sm-none">
+                  $325,000
+                </mat-panel-description>
+                <mat-panel-description class="d-none d-sm-inline-block">
+                  Purchase
+                </mat-panel-description>
+              </div>
+              <mat-icon color="warn" svgIcon="exclamation-triangle" class="icon"></mat-icon>
+              <div class="parent-header-amount ml-auto d-none d-sm-inline-block">
+                <div class="parent-header-amount_subtitle">Loan Amount</div>
+                <div class="parent-header-amount_amount">$325,000</div>
+              </div>
+          </mat-expansion-panel-header>
+          
+          <div class="row list">
+            <div class="col-12 col-sm-6">
+              <mat-list>
+                <mat-list-item>
+                  <div mat-line>Label</div>
+                  <div mat-line>Input</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <div mat-line>Label</div>
+                  <div mat-line>Input</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <div mat-line>Label</div>
+                  <div mat-line>Input</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <div mat-line>Label</div>
+                  <div mat-line>Input</div>
+                </mat-list-item>
+              </mat-list>
+              <mat-divider class="d-block d-sm-none"></mat-divider>
+            </div>
+            <div class="col-12 col-sm-6">
+              <mat-list>
+                <mat-list-item>
+                  <div mat-line>Label</div>
+                  <div mat-line>Input</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <div mat-line>Label</div>
+                  <div mat-line>Input</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <div mat-line>Label</div>
+                  <div mat-line>Input</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <div mat-line>Label</div>
+                  <div mat-line>Input</div>
+                </mat-list-item>
+              </mat-list>
+            </div>
+          </div>
+
+          <!-- child expansion panel -->
+          <mat-expansion-panel class="expansion-panel expansion-panel__loan-dashboard expansion-panel__loan-dashboard_child mat-elevation-z0">
+            <mat-expansion-panel-header collapsedHeight="56px" expandedHeight="56px">
+                <mat-panel-title>
+                  Title
+                </mat-panel-title>
+                <mat-icon color="warn" svgIcon="exclamation-triangle" class="icon mr-6"></mat-icon>
+            </mat-expansion-panel-header>
+      
+              <mat-nav-list>
+                <a mat-list-item>
+                  <mat-icon mat-list-icon svgIcon="file-signature" class="icon-md"></mat-icon>
+                  <div mat-line>Label</div>
+                  <button mat-icon-button [matMenuTriggerFor]="" aria-label="expanded information">
+                    <mat-icon mat-list-icon svgIcon="info-circle" class="icon-md"></mat-icon>
+                  </button>
+                </a>
+                <a mat-list-item>
+                  <mat-icon mat-list-icon svgIcon="file-signature" class="icon-md"></mat-icon>
+                  <div mat-line>Label</div>
+                  <button mat-icon-button [matMenuTriggerFor]="" aria-label="expanded information">
+                    <mat-icon svgIcon="info-circle" class="icon-md"></mat-icon>
+                  </button>
+                </a>
+              </mat-nav-list>
+            
+          </mat-expansion-panel>
+        </mat-expansion-panel>
+        <div class="card-footer bg-transparent d-flex">
+          <button mat-button color="primary">View Loan</button>
+          <button mat-button color="primary">Approval Letter</button>
+          <button mat-icon-button [matMenuTriggerFor]="" aria-label="expanded information" class="ml-auto"> 
+            <mat-icon svgIcon="info-circle" class="icon-md"></mat-icon>
+          </button>
+        </div>
+      </div> <!-- end card -->
+
+    </mat-accordion>
+  </div> <!-- end col -->
+
+  <div class="col-12 col-lg-3">
+    <div class="card card-loan-dashboard-nav pb-2">
+      <mat-nav-list>
+        <a mat-list-item href="#">
+          <mat-icon mat-list-icon svgIcon="bars" class="icon-md"></mat-icon>
+          <div mat-line>My Applications</div>
+        </a>
+        <a mat-list-item href="#">
+          <mat-icon mat-list-icon svgIcon="bars" class="icon-md"></mat-icon>
+          <div mat-line>My Profile</div>
+        </a>
+        <a mat-list-item href="#">
+          <mat-icon mat-list-icon svgIcon="bars" class="icon-md"></mat-icon>
+          <div mat-line>Loan Calculator</div>
+        </a>
+        <a mat-list-item href="#">
+          <mat-icon mat-list-icon svgIcon="bars" class="icon-md"></mat-icon>
+          <div mat-line>Custom Rate Table</div>
+        </a>
+        <a mat-list-item href="#">
+          <mat-icon mat-list-icon svgIcon="bars" class="icon-md"></mat-icon>
+          <div mat-line>Resource Center</div>
+        </a>
+        <mat-expansion-panel class="mat-elevation-z0">
+          <mat-expansion-panel-header collapsedHeight="56px" expandedHeight="56px">
+            <mat-icon mat-list-icon svgIcon="bars" class="icon-md"></mat-icon>
+            <div>
+              <mat-panel-title>
+                New Application
+              </mat-panel-title>
+            </div>
+          </mat-expansion-panel-header>
+          <mat-nav-list dense class="">
+            <h3 matSubheader>
+              <!-- <mat-icon mat-list-icon svgIcon="bars" class="icon-md"></mat-icon> -->
+              Purchase
+            </h3>
+            <a mat-list-item href="...">Pre-Qualify</a>
+            <a mat-list-item href="...">Pre-Approval</a>
+            <a mat-list-item href="...">Full Application</a>
+          </mat-nav-list>
+          <mat-nav-list dense class="">
+            <h3 matSubheader class="mt-2">Refinance</h3>
+            <a mat-list-item href="...">Option One</a>
+            <a mat-list-item href="...">Option Two</a>
+          </mat-nav-list>
+          <mat-nav-list dense class="">
+            <h3 matSubheader class="mt-2">Use My Equity</h3>
+            <a mat-list-item href="...">Option One</a>
+            <a mat-list-item href="...">Option Two</a>
+            <a mat-list-item href="...">Option Three</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+       </mat-nav-list>
+    </div> <!-- card-loan-dashboard-nav -->
+  </div> <!-- endcol -->
+
+</div>  <!-- end row -->
+
+
+<div class="row justify-content-center mt-10">
+  <div class="application-wrapper">
+
+
+    <!-- standard panel -->
+    <mat-expansion-panel class="expansion-panel mat-elevation-z0 mb-10">
+      <mat-expansion-panel-header collapsedHeight="64px">
+          <mat-panel-title>
+            This is the expansion title
+          </mat-panel-title>
+          <mat-panel-description>
+            This is a summary of the content
+          </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <mat-action-row>
+        <button mat-button color="primary">Click Me</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+
+    <!-- nested panels -->
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let panel of accordions" class="expansion-panel expansion-panel__loan-details expansion-panel__loan-details_parent mat-elevation-z0">
+        <mat-expansion-panel-header collapsedHeight="56px">
+            <mat-panel-title>
+              {{ panel.title }}
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <ng-container *ngIf="panel.subAccordion">
+
+          <mat-accordion>
+            <mat-expansion-panel *ngFor="let subpanel of panel.subAccordion" class="expansion-panel expansion-panel__loan-details expansion-panel__loan-details_child mat-elevation-z0">
+              <mat-expansion-panel-header collapsedHeight="56px" expandedHeight="56px">
+                  <mat-panel-title>
+                    {{ subpanel.title }}
+                  </mat-panel-title>
+              </mat-expansion-panel-header>
+        
+                <mat-list>
+                  <mat-list-item>
+                    <div matLine>{{ subpanel.firstName }}</div>
+                    <div matLine>{{ subpanel.lastName }}</div>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <div matLine>{{ subpanel.firstName }}</div>
+                    <div matLine>{{ subpanel.lastName }}</div>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <div matLine>{{ subpanel.firstName }}</div>
+                    <div matLine>{{ subpanel.lastName }}</div>
+                  </mat-list-item>
+                </mat-list>
+              
+            </mat-expansion-panel>
+          </mat-accordion>
+
+        </ng-container>
+        
+      </mat-expansion-panel>
+    </mat-accordion>
+
+  </div> <!-- end application wrapper -->
+</div> <!-- end row -->

@@ -1,24 +1,18 @@
-<div class="row justify-content-center">
-  <div class="col-sm-10 col-xl-6">
 
-    <form novalidate>
-      <label id="radio-question" class="question">{{question}}</label>
-      <mat-radio-group
-        aria-labelledby="radio-question"
-        [(ngModel)]="possibleAnswers"
-        [formControl]="answerControl"
-        required >
-        <mat-radio-button *ngFor="let answer of answers" [value]="answer">
-          {{answer}}
-        </mat-radio-button>
-      </mat-radio-group>
-      <mat-error class="d-flex" *ngIf="answerControl.hasError('required')">{{errorMessage}}</mat-error>
-      <!-- <div class="mt-4">Your answer is: <b>{{ possibleAnswers }}</b></div> -->
-    </form> <!-- /.question-answer -->
+<form novalidate>
+  <label id="radio-question" class="question">{{question}}</label>
+  <mat-radio-group
+    aria-labelledby="radio-question"
+    [(ngModel)]="possibleAnswers"
+    [formControl]="answerControl"
+    required >
+    <mat-radio-button *ngFor="let answer of answers" [value]="answer">
+      {{answer}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <mat-error class="d-flex" *ngIf="answerControl.hasError('required')">{{errorMessage}}</mat-error>
+  <!-- <div class="mt-4">Your answer is: <b>{{ possibleAnswers }}</b></div> -->
+</form> <!-- /.question-answer -->
 
-    <button mat-flat-button type="button" (click)="getErrorMessage()" color="primary" class="d-flex mx-auto mt-10">Continue</button>
-
-  </div> <!-- /.col -->
-</div> <!-- /.row -->
-
+<button mat-flat-button type="button" (click)="getErrorMessage()" color="primary" class="d-flex mx-auto mt-10">Continue</button>
 

@@ -1,21 +1,74 @@
 @import '../../scss/variables';
 
-.sidenav-container { height: 100%; }
-
-.sidenav { width: 225px; }
-
-// .sidenav .mat-toolbar { background: inherit; }
-
-// .mat-toolbar.sticky {
-//   position: sticky;
-//   top: 0;
-//   z-index: 1;
-// }
-
-.active-link { color: $primary }
+// **** toolbar / top header ****//
+.mat-toolbar.mat-primary { background: $color-primary-900; }
 
 .mat-button ~ .mat-button { margin-left: .5rem; }
 
 
+// ================================================
+// Navigation
+// ================================================
+
+.mat-sidenav-container {
+  background-color: white !important;
+  height: 100vh;
+  padding-top: 56px;
+  @media (min-width: 600px) { padding-top: 64px; }
+}
+
+// .sidenav-container {  height: calc(100vh - 56px) }
+// @media (min-width: 600px) { .sidenav-container {  height: calc(100vh - 64px) } }
+
+
+// **** sidenav ****//
+.mat-sidenav {
+  @extend .mat-sidenav-container;
+  width: 225px;
+}
+
+.mat-nav-list { margin: auto 10px auto 0; }
+
+.mat-list-item { border-radius: 0 50px 50px 0; }
+
+.active-link {
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+}
+
+.mat-list-item-divider {
+  border-top-color: $color-primary;
+  border-top-width: 2px;
+  width: 50px;
+  position: relative;
+  top: -2;
+  margin: 0 auto;
+}
+
+::ng-deep .mat-sidenav {
+  .mat-expansion-panel {
+    // border-radius: 0 50px 50px 0;
+    .mat-expansion-panel-header { 
+      font-size: 1rem;
+      padding:0 16px;
+      border-radius: 0 50px 50px 0;
+    }
+    .mat-expansion-panel-content {
+      .mat-expansion-panel-body {
+        padding: 0;
+        .mat-list-item {
+          font-size: $font-size-md;
+        }
+      }
+    }
+  }
+}
+
+// **** sidenav content ****//
+// used for sticky footer
+.mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
+}
 
 

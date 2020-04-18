@@ -1,7 +1,6 @@
 @import 'colors';
 @import '~@angular/material/theming';
 
-
 // ================================================
 // Functions
 // ================================================
@@ -21,10 +20,26 @@ $theme-accent: mat-palette($mat-secondary-blue);
 $theme-warn: mat-palette($mat-warning-orange);
 
 // Create color vars from theme palettes
-$primary:  mat-color($theme-primary, 500);
-$primary-50:  mat-color($theme-primary, 50);
-$accent: mat-color($theme-accent, 500);
-$accent-50: mat-color($theme-accent, 50);
+$color-primary:  mat-color($theme-primary, 500);
+$color-primary-12:  rgba(119, 83, 208, 0.12);
+$color-primary-50:  mat-color($theme-primary, 50);
+$color-primary-900:  mat-color($theme-primary, 900);
+$color-accent: mat-color($theme-accent, 500);
+$color-accent-04: rgba(0, 116, 217, 0.04);
+$color-accent-08: rgba(0, 116, 217, 0.08);
+$color-accent-50: mat-color($theme-accent, 50);
+$color-accent-900: mat-color($theme-accent, 900);
+
+$theme-colors: (
+  "primary": $color-primary,
+  "primary-50": $color-primary-50,
+  "primary-900": $color-primary-900,
+  "accent": $color-accent,
+  "accent-04": $color-accent-04,
+  "accent-08": $color-accent-08,
+  "accent-50": $color-accent-50,
+  "accent-900": $color-accent-900,
+);
 
 
 // ================================================
@@ -38,6 +53,7 @@ $body-color: $neutral-charcoal;
 // Links
 // ================================================
 
+$link-color: $color-primary;
 // $link-hover-color: darken($link-color, 15%);
 // $link-hover-decoration: underline;
 
@@ -46,9 +62,16 @@ $body-color: $neutral-charcoal;
 // Typography
 // ================================================
 
+// font family
 $font-family-base: proxima-nova, sans-serif;
+
+// font size
 $font-size-base: 1rem;
-$line-height-base: 1.25;
+$font-size-xl: $font-size-base * 1.125;
+$font-size-lg: $font-size-base * 0.9375;
+$font-size-md: $font-size-base * 0.875;
+$font-size-sm: $font-size-base * 0.8125;
+$font-size-xs: $font-size-base * 0.75;
 
 // font-weights
 $font-weight-light: 300;
@@ -60,13 +83,10 @@ $font-weight-bolder: 800;
 $font-weight-black: 900;
 
 // paragraphs
-$xl-paragraph: $font-size-base * 1.125;
-$lg-paragraph: $font-size-base * 0.9375;
-$md-paragraph: $font-size-base * 0.875;
-$sm-paragraph: $font-size-base * 0.8125;
-$xs-paragraph: $font-size-base * 0.75;
 $paragraph-margin-bottom: 1.125rem;
 
+// line height
+$line-height-base: 1.25;
 
 // headings
 $h1-font-size: $font-size-base * 2;
@@ -78,11 +98,12 @@ $h6-font-size: $font-size-base * 1;
 
 $headings-font-weight: $font-weight-bold;
 $headings-line-height: $line-height-base;
+// $headings-color: ;
 
-$display1-size: $font-size-base * 2.625;
-$display2-size: $font-size-base *  2.375;
+$display1-size: $font-size-base * 2.625; //42px
+$display2-size: $font-size-base *  2.375; //38px
 
-//$text-muted: ;
+$text-muted: $neutral-gray-dark;
 // $mark-bg: ;
 
 
@@ -117,6 +138,7 @@ $spacers: map-merge(
 
 // Borders
 $border-color: $neutral-gray-light;
+$border-radius: .25rem;
 
 
 // ================================================

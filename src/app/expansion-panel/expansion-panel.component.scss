@@ -1,0 +1,275 @@
+@import '../../scss/variables';
+
+// https://stackblitz.com/edit/angular-95u99z?file=src%2Fapp%2Fapp.component.ts
+
+
+// expansion panel
+::ng-deep .expansion-panel {
+  border: 1px solid $neutral-gray-light;
+
+  .mat-expansion-panel-header {
+    .mat-content {
+      flex-direction: column;
+
+      .mat-expansion-panel-header-title {
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-xl;
+        margin-right: 0px;
+      }
+      .mat-expansion-panel-header-description {
+        margin-top: 0.25rem;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+        margin-right: 0px;
+      }
+    }
+  }
+  
+  .mat-expansion-panel-content{
+    .mat-expansion-panel-body {
+      padding-top: 24px;
+      border-top: 1px solid $neutral-gray-light;
+    }
+    // .mat-action-row {}
+  }
+} // end expansion panel
+
+
+// expansion panel loan details
+::ng-deep .expansion-panel__loan-details {
+  
+  border-radius: 4px !important;
+  &:not(:last-child) { margin-bottom: 16px;}
+
+  .mat-expansion-panel-header {
+    &.mat-expanded {
+      .mat-expansion-panel-header-title { color: $color-primary; }
+    }
+  }
+
+  .mat-expansion-panel-content {
+    .mat-expansion-panel-body {
+      padding-top: 0px;
+      border-top: 0px;
+    }
+  }
+
+  &_parent {
+    .mat-expansion-panel-header {
+      &.mat-expanded { background-color: $color-primary-50;}
+    }
+
+    .mat-expansion-panel-content {
+      .mat-expansion-panel-body {
+        padding-bottom: 24px;
+        background-color: $color-primary-50; }
+    }
+  }
+
+  &_child {
+    .mat-expansion-panel-header {
+      .mat-content {
+        .mat-expansion-panel-header-title { font-size: $font-size-lg; }
+      }
+  
+      &.mat-expanded { background-color: $neutral-white; }
+    }
+
+    .mat-expansion-panel-content {
+      .mat-expansion-panel-body {
+        padding-bottom: 16px;
+        background-color: $neutral-white;
+
+        .mat-list-base {
+          padding-top: 0px;
+          .mat-list-item {
+            &:not(:last-child) { border-bottom: 1px solid $neutral-gray-light;}
+            &.mat-2-line { height: 60px; }
+            @media (min-width: 576px) {
+              &.mat-2-line { height: 40px; }
+            }
+            .mat-list-item-content {
+              padding: 0px;
+              .mat-list-text { 
+                @media (min-width: 576px) { flex-direction: row; }
+                .mat-line {
+                  &:first-child {
+                    font-size: $font-size-md;
+                    font-weight: $font-weight-semibold;
+                    flex-basis: 40%;
+                  }
+                  &:nth-child(n+2) { font-size: $font-size-md;}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+
+} // end expansion panel loan details
+
+
+// expansion panel loan dashboard
+.card-loan-dashboard {
+  margin-bottom: 24px;
+  .card-footer {
+    padding: 8px;
+    .mat-button {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      & + .mat-button { margin-left: 8px; }
+    }
+  } 
+}
+::ng-deep .expansion-panel__loan-dashboard {
+
+  border-radius: 4px !important;
+
+  .mat-expansion-panel-header {
+    border-radius: 4px 4px 0 0;
+    &.mat-expanded {
+      .mat-expansion-panel-header-title { color: $color-primary; }
+    }
+  }
+
+  .mat-expansion-panel-content {
+    .mat-expansion-panel-body {
+      padding-top: 8px;
+      border-top: 0px;
+    }
+  }
+
+  .mat-list-base {
+    padding-top: 0px;
+    .mat-list-item {
+      &:not(:last-child) { border-bottom: 1px solid $neutral-gray-light;}
+      &.mat-2-line { height: 60px; }
+      @media (min-width: 576px) {
+        &.mat-2-line { height: 40px; }
+      }
+      .mat-list-item-content {
+        .mat-list-text { 
+          @media (min-width: 576px) {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .mat-line {
+            &:first-child { font-size: $font-size-md; }
+            &:nth-child(n+2) {
+              font-size: $font-size-md;
+              font-weight: $font-weight-semibold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_parent {
+    border: 0px;
+    .mat-expansion-panel-header {
+      .mat-content {
+        flex-direction: row;
+        align-items: center;
+
+        .mat-icon {
+          &.icon-status {
+            height: 40px;
+            min-width: 40px;
+          }
+        }
+
+        .parent-header-text { margin: 0 24px 0 16px; }
+
+        .parent-header-amount {
+          margin-right: 24px;
+          text-align: right;
+          &_subtitle {
+            font-size: $font-size-sm;
+            font-weight: $font-weight-medium;
+            color: $neutral-gray-dark;
+            // text-transform: uppercase;
+            // letter-spacing: 1px;
+          }
+          &_amount {
+            margin-top: 4px;
+            font-size: $font-size-xl;
+            font-weight: $font-weight-semibold;
+          }
+        }
+      }
+      &.mat-expanded { background-color: $color-primary-50;}
+    }
+
+    .mat-expansion-panel-content {
+      .mat-expansion-panel-body {
+        .list { margin-bottom: 16px;
+          .mat-list-base {
+            .mat-list-item {
+              .mat-list-item-content { padding: 0px;}
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_child {
+    .mat-expansion-panel-header {
+       &.mat-expanded { background-color: $color-primary-50;}
+      .mat-content {
+        .mat-expansion-panel-header-title { font-size: $font-size-lg; }
+      }
+    }
+
+    .mat-expansion-panel-content {
+      .mat-expansion-panel-body {
+        padding: 8px 0;
+        background-color: $neutral-white; 
+      }
+    }
+  } 
+
+} // end expansion panel loan dashboard
+
+
+// loan dashboard navigation
+::ng-deep .card-loan-dashboard-nav {
+
+  .mat-list-base {
+    .mat-subheader { 
+      height: 32px;
+      font-size: $font-size-lg;
+      // background-color: $neutral-off-white;
+    }
+    .mat-list-item {
+      font-size: $font-size-lg;
+      &:not(:last-child) { border-bottom: 1px solid $neutral-gray-light;}
+      .mat-list-item-content {
+        .mat-list-text {
+          .mat-line { font-weight: $font-weight-medium;}
+        }
+      }
+    }
+  }
+
+  .mat-expansion-panel {
+    border-radius: 0px;
+    .mat-expansion-panel-header {
+      padding: 0 16px;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-medium;
+      .mat-content {
+        .mat-list-icon { margin: 0 4px;} 
+        .mat-expansion-panel-header-title { padding-left: 16px; }
+      }
+    }
+    .mat-expansion-panel-content {
+      .mat-expansion-panel-body { padding: 0; }
+    }
+  }
+
+} // end loan dashboard navigation
+

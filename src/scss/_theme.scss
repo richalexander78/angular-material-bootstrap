@@ -1,32 +1,47 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
+
+// ================================================
+// Typography
+// $title: mat-typography-level($h2-font-size, $line-height-base, $headings-font-weight),
+// ================================================
 $custom-typography: mat-typography-config(
   $font-family: $font-family-base,
-  $button: mat-typography-level(13px, 1.25, 500)
+  $button: mat-typography-level($font-size-sm, $line-height-base, $font-weight-bold),
+  $body-1: mat-typography-level($font-size-xl, $line-height-base, $font-weight-normal)
+
 );
 @include angular-material-typography($custom-typography);
 
-// For each palette, you can optionally specify a default, lighter, and darker hue
-// $theme-primary: mat-palette($mat-primary-purple, 500, 100, 900);
-// $theme-accent: mat-palette($mat-secondary-blue);
-// $theme-warn: mat-palette($mat-warning-orange);
+
+// ================================================
+// Theme
+// ================================================
+
+// Import custom componenet themes
+// @import '../app/footer/footer.component.scss-theme.scss';
+// Add additional componenets here
+// @mixin custom-components-theme($theme) {
+//   @include footer-component-theme($theme);
+// }
 
 // Create the theme object (a Sass map containing all of the palettes).
 $my-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
-
 
 // Background palette for light themes.
 $my-mat-light-theme-background: (
   status-bar: map_get($mat-grey, 300),
   app-bar:    map_get($mat-grey, 100),
   background: map_get($mat-grey, 50),
-  hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
+  // hover:      rgba(black, 0.04),
+  hover:      rgba($color-primary, 0.12), // TODO(kara): check style with Material Design UX
   card:       white,
   dialog:     white,
   disabled-button: rgba(black, 0.12),
   raised-button: white,
   focused-button: $dark-focused,
+  // selected-button: rgba($color-primary, 0.12),
   selected-button: map_get($mat-grey, 300),
   selected-disabled-button: map_get($mat-grey, 400),
   disabled-button-toggle: map_get($mat-grey, 200),
@@ -37,14 +52,14 @@ $my-mat-light-theme-background: (
 // Foreground palette for light themes.
 $my-mat-light-theme-foreground: (
   base:              black,
-  divider:           $dark-dividers,
+  divider:           $neutral-gray-light,
   dividers:          $dark-dividers,
   disabled:          $dark-disabled-text,
   disabled-button:   rgba(black, 0.26),
   disabled-text:     $dark-disabled-text,
   elevation:         black,
   hint-text:         $dark-disabled-text,
-  secondary-text:    $dark-secondary-text,
+  secondary-text:    $neutral-gray-dark,
   icon:              rgba(black, 0.54),
   icons:             rgba(black, 0.54),
   text:              $neutral-charcoal,
@@ -52,8 +67,11 @@ $my-mat-light-theme-foreground: (
   slider-off:        rgba(black, 0.26),
   slider-off-active: rgba(black, 0.38),
 );
-$my-theme-custom: map-merge($my-theme, (foreground: $my-mat-light-theme-foreground, background: $my-mat-light-theme-background));
+$my-custom-theme: map-merge($my-theme, (foreground: $my-mat-light-theme-foreground, background: $my-mat-light-theme-background));
 
 
 // use our theme with angular-material-theme mixin
-@include angular-material-theme($my-theme-custom);
+@include angular-material-theme($my-custom-theme);
+
+// use custom component themes with angular-material-theme mixin
+// @include custom-components-theme($my-custom-theme);

@@ -12,7 +12,7 @@ export class FormFieldComponent implements OnInit {
   email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
+    return this.email.hasError('required') ? 'Please provide email' :
         this.email.hasError('email') ? 'Not a valid email' :
             '';
   }
