@@ -3,9 +3,9 @@
 
     <div class="row">
       <div class="col-sm">
-        <mat-form-field appearance="outline" color="primary" class="w-100 mb-4" [floatLabel]='never'>
+        <mat-form-field appearance="outline" color="primary" class="w-100 mb-4" [floatLabel]=''>
           <!-- <mat-label>First name</mat-label> -->
-          <input matInput placeholder="First name" [formControl]="name">
+          <input matInput placeholder="First name" [formControl]="">
           <!-- <span matPrefix>$&nbsp;</span> -->
           <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
@@ -14,7 +14,7 @@
       <div class="col-sm">
         <mat-form-field appearance="outline" class="w-100 mb-4">
           <mat-label>Last name</mat-label>
-          <input matInput placeholder="Last name" [formControl]="name">
+          <input matInput placeholder="Last name" [formControl]="">
           <mat-hint>Optional</mat-hint>
           <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
