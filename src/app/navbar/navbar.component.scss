@@ -1,5 +1,24 @@
 @import '../../scss/variables';
 
+
+.number-circle {
+  circle {fill: black;}
+}
+
+.number-circle:active {
+  circle {fill: black;}
+}
+
+
+ng:deep .active-link {
+  .mat-list-item-content {
+    .number-circle {
+      circle {fill: red;}
+    }
+  }
+}
+
+
 // **** toolbar / top header ****//
 .mat-toolbar.mat-primary { background: $color-primary-900; }
 

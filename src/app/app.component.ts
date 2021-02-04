@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'angular-material-io';
 
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
+    this.matIconRegistry.addSvgIcon("number-circle",this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/number-circle.svg"));
       this.matIconRegistry.addSvgIcon("chat",this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/chat.svg"));
       this.matIconRegistry.addSvgIcon("chevron-left",this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/chevron-left.svg"));
       this.matIconRegistry.addSvgIcon("chevron-right",this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/chevron-right.svg"));

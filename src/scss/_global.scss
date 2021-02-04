@@ -49,11 +49,20 @@ strong {
 
 
 // **** buttons **** //
-.mat-stroked-button {
-  border-color: $color-primary;
-  // border-width: 1.5px;
+// .mat-stroked-button { border-width: 1.5px !important; }
+
+.mat-stroked-button,
+.mat-raised-button,
+.mat-flat-button {
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.mat-orange,
+.mat-raised-button,
+.mat-flat-button {
+  background-color: $warning-orange;
+  //color: $neutral-white;
 }
 
 
