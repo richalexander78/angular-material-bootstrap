@@ -1,0 +1,39 @@
+@mixin loan-officer-profile-theme($config-or-theme) {
+  // retrieve variables from theme
+  // (all possible variables, use only what you really need)
+  $config: mat-get-color-config($config-or-theme);
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+  $warn: map-get($config, warn);
+  $foreground: map-get($config, foreground);
+  $background: map-get($config, background);
+
+  .mat-card {
+    border: 1px solid map-get($mat-neutral-gray, 400);
+
+    .mat-card-header {
+      margin: 0 24px;
+
+      .mat-card-header-text {
+        margin: 0;
+
+        .mat-card-title {
+          font: {
+            size: $font-size-lg;
+            weight: $font-weight-bold;
+          }
+        }
+        .mat-card-subtitle {
+          font-size: $font-size-md;
+          color: $neutral-charcoal;
+        }
+      }    
+    }
+    
+  }
+
+  .mat-card-content {
+    margin: 0 24px;
+  }
+
+}

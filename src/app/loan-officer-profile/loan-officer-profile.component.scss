@@ -1,0 +1,77 @@
+@import "/src/scss/variables";
+@import "/src/scss/found-mat-list.scss";
+
+/* Profile
+==================================== */
+.profile-image {
+  // min-width: 175px;
+  // background-image: url(../../assets/images/loan-officer.jpg);
+  // -ms-background-position-x: center;
+  // -ms-background-position-y: center;
+  // background-position: center center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  border: 4px solid $neutral-gray-light;
+}
+
+
+.profile-header {
+  border-bottom: 1px solid $neutral-gray-light;
+
+  .title {
+    font-weight: $font-weight-medium;
+  }
+
+  .nmls-number,
+  .state-license {
+    font-size: $font-size-md;
+    text-align: right;
+  }
+
+  span {
+    text-transform: uppercase; 
+    font-weight: $font-weight-semibold;
+  }
+}
+
+
+/* Review
+==================================== */
+.reviews-header { border-bottom: 1px solid $neutral-gray-light; }
+
+.stars { color: $accent-yellow-dark; }
+
+.stars-count, 
+.review-count, 
+.review-card .date {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+}
+
+.review-card {
+  blockquote { font-size: $font-size-base;}
+  .name { font-weight: $font-weight-semibold; }
+}
+
+
+// /* Mat Card
+// ==================================== */
+
+// .mat-card {
+//   padding: 1rem 0 0;
+// }
+
+// .mat-card>.mat-card-actions:last-child {
+//   margin-bottom: 0;
+// } 
+
+// .mat-card-actions {
+//   margin: 0;
+//   padding: 0;
+//   background-color: rgba(0, 128, 128, .05);
+//   .mat-button-base {
+//     font-weight: $font-weight-medium;
+//     letter-spacing: inherit;
+//     text-transform: none;
+//   }
+// }

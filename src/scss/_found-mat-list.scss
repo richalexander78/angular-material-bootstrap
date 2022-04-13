@@ -1,0 +1,18 @@
+/* Mat List
+==================================== */
+.mat-list-base { 
+  padding-top: 0px; 
+  
+  .mat-list-item {
+    font-size: $font-size-md;
+    height: 32px; 
+
+    ::ng-deep .mat-list-item-content {
+      justify-content: space-between;
+      padding: 0;
+      .list-label {
+        font-weight: $font-weight-semibold;
+      }
+    } 
+  }
+}

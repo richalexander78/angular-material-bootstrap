@@ -16,6 +16,7 @@ import { MaterialElevationDirective } from './material-elevation.directive';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 // import { CustomIconService } from "./services/custom-icon.service";
 import { HttpService } from './http.service';
+import { LoanOfficerProfileComponent } from './loan-officer-profile/loan-officer-profile.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { HttpService } from './http.service';
     ScrollTopComponent,
     MaterialElevationDirective,
     LandingPageComponent,
+    LoanOfficerProfileComponent,
   ],
   imports: [
     BrowserModule,

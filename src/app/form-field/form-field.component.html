@@ -3,7 +3,7 @@
 
     <div class="row">
       <div class="col-sm">
-        <mat-form-field appearance="outline" color="primary" class="w-100 mb-4" [floatLabel]=''>
+        <mat-form-field appearance="outline" color="primary" class="w-100 mb-4">
           <!-- <mat-label>First name</mat-label> -->
           <input matInput placeholder="First name" [formControl]="">
           <!-- <span matPrefix>$&nbsp;</span> -->
@@ -25,7 +25,7 @@
       <div class="col-12">
         <mat-form-field appearance="outline" class="w-100 mb-4">
           <mat-label>Your email</mat-label>
-          <input matInput placeholder="email@example.com" [formControl]="email">
+          <input matInput placeholder="email@example.com" [formControl]="">
           <mat-hint>Errors appear instantly!</mat-hint>
           <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
@@ -34,7 +34,7 @@
       <div class="col-12">
         <mat-form-field appearance="outline" class="w-100">
           <mat-label>Your email</mat-label>
-          <input matInput placeholder="email@example.com" [formControl]="email">
+          <input matInput placeholder="email@example.com" [formControl]="">
           <mat-hint>Errors appear instantly!</mat-hint>
           <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>

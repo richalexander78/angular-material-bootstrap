@@ -44,6 +44,7 @@
       <!-- <mat-divider class="mat-list-item-divider"></mat-divider> -->
       <a mat-list-item routerLink="/api" routerLinkActive="active-link">API</a>
       <a mat-list-item routerLink="/grid" routerLinkActive="active-link">Grid</a>
+      <a mat-list-item routerLink="/loan-officer-profile" routerLinkActive="active-link">Loan Officer Profile</a>
       <a mat-list-item routerLink="/expansion-panel" routerLinkActive="active-link">Expansion Panel</a>
       <a mat-list-item routerLink="/contact-card" routerLinkActive="active-link">Contact Card</a>
       <a mat-list-item routerLink="/info-block" routerLinkActive="active-link">Info Block</a>
@@ -78,7 +79,8 @@
 
       <!-- page content -->
       <main class="container mb-10 py-6 pt-md-9 pb-md-10">
-        <router-outlet (activate)="onActivate($event)"></router-outlet>
+        <!-- <router-outlet (activate)="onActivate($event)"></router-outlet> -->
+        <router-outlet></router-outlet>
       </main>
 
       <!-- <ng-content></ng-content> -->

@@ -9,6 +9,7 @@ import { InfoBlockComponent } from './info-block/info-block.component';
 import { ContactCardComponent } from './contact-card/contact-card.component';
 import { ApiComponent } from './api/api.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
+import { LoanOfficerProfileComponent } from './loan-officer-profile/loan-officer-profile.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'contact-card', component: ContactCardComponent  },
   { path: 'api', component: ApiComponent  },
   { path: 'expansion-panel', component: ExpansionPanelComponent  },
+  { path: 'loan-officer-profile', component: LoanOfficerProfileComponent },
 ];
 
 @NgModule({
@@ -37,5 +39,6 @@ export const routingComponents = [
   InfoBlockComponent,
   ContactCardComponent,
   ApiComponent,
-  ExpansionPanelComponent
+  ExpansionPanelComponent,
+  LoanOfficerProfileComponent,
 ];
